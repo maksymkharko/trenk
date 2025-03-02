@@ -1,73 +1,90 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <title>Generator Hasla Trenkwalder</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <script src="index.js"></script>
-    <div class="save-popup-container">
-      <div class="save-popup-body">
-        <div class="save-popup-text">
-          Zapisacz date urodzenia w lokalnym schowku?
-        </div>
-        <div class="save-popup-buttons-container">
-          <div class="save-popup-button save-popup-save-button">Tak</div>
-          <div class="save-popup-button save-popup-discard-button">Nie</div>
-        </div>
-      </div>
-    </div>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Generator Hasła Trenkwalder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .main-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        h1, h5, h4 {
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #2c2c2c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .save-popup-container, .output-box-and-cpy-button, .save-credentials-container {
+            margin-top: 15px;
+        }
+        .save-popup-button, .copy-button, .save-credentials-button {
+            background-color: #1e88e5;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .save-popup-button:hover, .copy-button:hover, .save-credentials-button:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
     <div class="main-container">
-      <h1 class="main-title">Generator Hasla Trenkwalder</h1>
-      <h5 class="tip">
-        Wprowadz date urodzenia oraz kod z maila Trenkwalder aby wygenerowac
-        haslo do pliku
-      </h5>
-      <div class="date-input-container">
-        <div class="date-input-container-day">
-          <h4 class="date-input-field-title">Dzien</h4>
-          <input type="text" class="hue-background" />
-          <h5 class="day-error-field error-field"></h5>
+        <h1>Generator Hasła Trenkwalder</h1>
+        <h5>Wprowadź datę urodzenia oraz kod z maila Trenkwalder, aby wygenerować hasło do pliku</h5>
+        
+        <div class="date-input-container">
+            <h4>Data urodzenia</h4>
+            <input type="date" class="hue-background" />
         </div>
-        <div class="date-input-container-month">
-          <h4 class="date-input-field-title">Miesiac</h4>
-          <input type="text" class="hue-background" />
-          <h5 class="month-error-field error-field"></h5>
+        
+        <div class="code-container">
+            <h4>Kod Trenkwalder</h4>
+            <input type="text" class="hue-background" />
         </div>
-        <div class="date-input-container-year">
-          <h4 class="date-input-field-title">Rok</h4>
-          <input type="text" class="hue-background" />
-          <h5 class="year-error-field error-field"></h5>
+        
+        <div class="output-container">
+            <h4>Hasło:</h4>
+            <div class="output-box-and-cpy-button">
+                <div class="output-box"></div>
+                <div class="copy-button">Kopiuj</div>
+            </div>
         </div>
-      </div>
-
-      <div class="code-container">
-        <h4>Kod Trenkwalder</h4>
-        <input type="text" class="hue-background" />
-        <h5 class="code-error-field error-field"></h5>
-      </div>
-
-      <div class="output-container">
-        <div class="output-box-and-cpy-button">
-          <div class="output-box-and-text">
-            <h4>Haslo:</h4>
-            <div class="output-box"></div>
-          </div>
-          <div class="copy-button">Copy</div>
+        
+        <div class="save-credentials-container">
+            <div class="save-credentials-button">Zapisz datę urodzenia</div>
         </div>
-        <div class="output-error"></div>
-      </div>
-
-      <div class="save-credentials-container">
-        <div class="save-credentials-button">Zapisz date urodzenia</div>
-      </div>
     </div>
-  </body>
+    <script src="index.js"></script>
+</body>
 </html>

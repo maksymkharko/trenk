@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Generator Hasla Trenkwalder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <script src="index.js"></script>
+    <div class="save-popup-container">
+      <div class="save-popup-body">
+        <div class="save-popup-text">
+          Zapisacz date urodzenia w lokalnym schowku?
+        </div>
+        <div class="save-popup-buttons-container">
+          <div class="save-popup-button save-popup-save-button">Tak</div>
+          <div class="save-popup-button save-popup-discard-button">Nie</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <h1 class="main-title">Generator Hasla Trenkwalder</h1>
+      <h5 class="tip">
+        Wprowadz date urodzenia oraz kod z maila Trenkwalder aby wygenerowac
+        haslo do pliku
+      </h5>
+      <div class="date-input-container">
+        <div class="date-input-container-day">
+          <h4 class="date-input-field-title">Dzien</h4>
+          <input type="text" class="hue-background" />
+          <h5 class="day-error-field error-field"></h5>
+        </div>
+        <div class="date-input-container-month">
+          <h4 class="date-input-field-title">Miesiac</h4>
+          <input type="text" class="hue-background" />
+          <h5 class="month-error-field error-field"></h5>
+        </div>
+        <div class="date-input-container-year">
+          <h4 class="date-input-field-title">Rok</h4>
+          <input type="text" class="hue-background" />
+          <h5 class="year-error-field error-field"></h5>
+        </div>
+      </div>
+
+      <div class="code-container">
+        <h4>Kod Trenkwalder</h4>
+        <input type="text" class="hue-background" />
+        <h5 class="code-error-field error-field"></h5>
+      </div>
+
+      <div class="output-container">
+        <div class="output-box-and-cpy-button">
+          <div class="output-box-and-text">
+            <h4>Haslo:</h4>
+            <div class="output-box"></div>
+          </div>
+          <div class="copy-button">Copy</div>
+        </div>
+        <div class="output-error"></div>
+      </div>
+
+      <div class="save-credentials-container">
+        <div class="save-credentials-button">Zapisz date urodzenia</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -59,6 +59,15 @@
         .save-popup-button:hover, .copy-button:hover, .save-credentials-button:hover {
             background-color: #e68900;
         }
+        .output-box {
+            background-color: #2c2c2c;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ff9800;
+            min-height: 20px;
+            color: white;
+            word-break: break-all;
+        }
     </style>
 </head>
 <body>
@@ -68,26 +77,46 @@
         
         <div class="date-input-container">
             <h4>Data urodzenia</h4>
-            <input type="date" class="hue-background" />
+            <input type="date" id="birthdate" class="hue-background" />
         </div>
         
         <div class="code-container">
             <h4>Kod Trenkwalder</h4>
-            <input type="text" class="hue-background" />
+            <input type="text" id="trenkwalderCode" class="hue-background" />
         </div>
         
         <div class="output-container">
             <h4>Hasło:</h4>
             <div class="output-box-and-cpy-button">
-                <div class="output-box"></div>
-                <div class="copy-button">Kopiuj</div>
+                <div class="output-box" id="passwordOutput"></div>
+                <div class="copy-button" onclick="copyPassword()">Kopiuj</div>
             </div>
         </div>
         
         <div class="save-credentials-container">
-            <div class="save-credentials-button">Zapisz datę urodzenia</div>
+            <div class="save-credentials-button" onclick="generatePassword()">Generuj hasło</div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script>
+        function generatePassword() {
+            const birthdate = document.getElementById('birthdate').value;
+            const code = document.getElementById('trenkwalderCode').value;
+            if (birthdate && code) {
+                const formattedDate = birthdate.split('-').join('');
+                const password = `${formattedDate}-${code}`;
+                document.getElementById('passwordOutput').textContent = password;
+            } else {
+                document.getElementById('passwordOutput').textContent = 'Wprowadź wszystkie dane!';
+            }
+        }
+        
+        function copyPassword() {
+            const password = document.getElementById('passwordOutput').textContent;
+            if (password && password !== 'Wprowadź wszystkie dane!') {
+                navigator.clipboard.writeText(password);
+                alert('Hasło skopiowane!');
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generowanie Hasła</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generowanie Hasła</h1>
+        <form id="passwordForm">
+            <label for="birthdate">Data urodzenia (RRRRMMDD):</label>
+            <input type="text" id="birthdate" name="birthdate" required>
+            
+            <label for="code">Kod weryfikujący:</label>
+            <input type="text" id="code" name="code" required>
+            
+            <button type="submit">Generuj Hasło</button>
+        </form>
+        
+        <div id="result"></div>
+        <div id="additionalInfo">
+Jeśli zastanawiasz się, kto stworzył tego bota, to wiedz – to robota Maksyma. A właściwie dzieło przypadku, bo jedną ręką trzymał piwo, drugą klepał kod, a głową walił w klawiaturę. Powstało coś, co jakimś cudem działa – trochę jak pacjent na OIOM-ie: niby żyje, ale nie wiadomo jak długo. Masz pytania, skargi czy chcesz wyrazić swój ból istnienia? Pisz na Telegramie: @clownades. Może ci pomoże… albo dobije. 
+</div> <!-- Дополнительный текст -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
